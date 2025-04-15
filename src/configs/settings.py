@@ -33,5 +33,10 @@ class Settings(BaseSettings):
     qdrant_collection_name: str = "retrieval"
     top_k: int = 5
     threshold: float = 0.5
-
+    # 
+    keycloak_url: str = None
+    keycloak_realm: str = None
+    keycloak_audience: str = None
+    algorithm: str = None
+    #
     model_config = SettingsConfigDict(env_file=".env", extra='ignore')
